@@ -1,0 +1,25 @@
+    FakeConnect simulates a connection by sending the SYN/ACK packets.
+    The objective is to stress test programs by opening thousand of connections in one TCP port.
+    
+
+    It is unable to spoof, you have to use you real IP address.
+    
+
+CAUTION:
+    Be careful, this program can crash some firewalls. ( even your local one ).
+    
+IPTABLES:
+    By default, ip_conntrack module on linux can handle 16344 connections. you have to increase this value or unload the ip_conntrack.
+    
+    
+
+Programs that stopping to response to the service:
+
+*Apache HTTPd ( default configuration ) - Connection-refused
+SSH                              - Connection-timeout
+Sendmail                         - Connection-timeout
+Postfix                          - Connection-timeout
+Inetd programs                   - (Crash the machine) Depends of the size of the program and the memory of the system.
+bind				 - Connection-timeout ( UDP service remains normal )
+
+    
