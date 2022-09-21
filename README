@@ -13,7 +13,7 @@ IPTABLES:
     
     
 
-Programs that stopping to response to the service:
+Programs that stop to response to the service:
 
 *Apache HTTPd ( default configuration ) - Connection-refused
 SSH                              - Connection-timeout
